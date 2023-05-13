@@ -1,2 +1,2 @@
 # rust-efivar-browser
-ncurses like application to browse to your systems UEFI variables 
+ncurses like application to browse to your systems UEFI variables , written in rust.
