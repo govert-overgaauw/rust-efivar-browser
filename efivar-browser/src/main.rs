@@ -1,6 +1,14 @@
 use cursive::views::{Dialog, TextView};
+use efivar::*;
 
 fn main() {
+	let var_man = system();
+	let enumerator: Box<dyn VarManager> = var_man;
+	for var in enumerator.get_var_names().expect("failed to list variable names!")
+	{
+		println!("{}", var.short_name());
+	}
+
 	// Creates the cursive root - required for every application.
     let mut siv = cursive::default();
 
