@@ -7,4 +7,7 @@ edition = "2021"
 
 [dependencies]
 efivar = "1.0.5"
-cursive = "0.19"
+cursive = {version = "0.19", default-features = false }
+
+[features]
+default = ["cursive/crossterm-backend"]
